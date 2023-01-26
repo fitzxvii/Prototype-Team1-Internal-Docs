@@ -45,8 +45,8 @@ section form button,
 section #login_block button {
   background: #FFFFFF;
   border-radius: 8px;
-  border: 1px solid #33B9DC;
-  color: #33B9DC;
+  border: 1px solid #009EBE;
+  color: #009EBE;
   font: 14px/20px "Roboto-Medium";
   height: 40px;
   position: relative;
@@ -67,7 +67,7 @@ section #login_block#login_block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #33B9DC;
+  background: #009EBE;
   border-radius: 0 5px 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,5 +101,54 @@ section #login_block#login_block img {
   section #login_block img {
     width: calc(100% - 40px);
     margin: 0 20px;
+  }
+}
+@media screen and (max-width: 719px) {
+  body {
+    background: #009EBE !important;
+    padding-top: 290px;
+  }
+  section {
+    background: transparent;
+    display: block;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 100%;
+  }
+  section #login_block {
+    background: transparent !important;
+    height: unset !important;
+    position: absolute;
+    top: -240px;
+    width: 100%;
+  }
+  section #login_block img {
+    max-width: 300px;
+  }
+  section form {
+    background: #FFFFFF;
+    border-radius: 30px 30px 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 290px);
+    padding-top: 143px;
+    text-align: center;
+    width: 100%;
+  }
+  section form h1 {
+    font: 16px/24px "Roboto-Medium";
+  }
+  section form img {
+    margin: 0 auto 39px;
+    width: 110px;
+  }
+  section form button {
+    margin: 0 auto;
   }
 }

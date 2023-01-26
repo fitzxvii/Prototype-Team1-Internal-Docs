@@ -1,10 +1,12 @@
 let assets_data = [
-    /* CSS Vendor */
+    /* CSS Global */
     {url: "/web-frontend/assets/css/vendor/bootstrap/bootstrap.min.css", type: "style"},
     {url: "/web-frontend/assets/css/custom/global.css", type: "style"},
 
-    /* JS Vendor */
+    /* JS Global */
     {url: "/web-frontend/assets/js/vendor/bootstrap/bootstrap.bundle.min.js", type: "script"},
+    {url: "/web-frontend/assets/js/vendor/csi.min.js", type: "script"},
+    {url: "/web-frontend/assets/js/custom/global.js", type: "script"},
 
     /* CUSTOM JS */
     {url: current_js, type: "script"}

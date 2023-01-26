@@ -19,11 +19,12 @@
     <script src="../../assets/js/vendor/assets_loader.min.js"></script>
     <script src="../../assets/js/custom/render_assets.js"></script>
 </head>
-<body class="hidden">
+<body>
     <section>
-        <form action="#" method="POST">
+        <form action="#" id="login_form" method="POST">
             <img src="../../assets/images/logo_big.svg" alt="Internal Doc Logo">
             <h1>Internal Documentation Tool</h1>
+            <input type="hidden" name="user_type" value="admin">
             <button type="submit">Login with Google</button>
         </form>
 

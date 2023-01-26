@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link rel="stylesheet" href="../../assets/css/custom/admin/components.css">
+
+    <!-- CONSTANTS -->
+    <script src="../../assets/js/constans.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script>
+        let current_js  = "../../assets/js/custom/admin/components.js";
+    </script>
+
+    <!-- ASSETS LOADER -->
+    <script src="../../assets/js/vendor/assets_loader.min.js"></script>
+    <script src="../../assets/js/custom/render_assets.js"></script>
+</head>
+<body>
+    <div data-include="./templates/navigation.html"></div>
+
+    <section id="component_wrapper">
+        <div id="left_panel">
+            <ul class="breadcrumbs_block">
+                <li><a href="#"><span class="breadcrumbs_icon"></span> Documentations</a></li>
+                <li><a href="#"><span class="breadcrumbs_icon"></span> Engineering Guide</a></li>
+                <li><p><span class="breadcrumbs_icon"></span> Data Usage, Collection, and Processing</p></li>
+            </ul>
+
+            <div class="section_details">
+                <div class="title_block">
+                    <input type="text" name="section_title" id="section_title" placeholder="Enter Title...">
+                    <button type="button"><span class="preview_icon"></span> Preview</button>
+                </div>
+
+                <textarea name="section_details" id="section_details" placeholder="Enter section details..."></textarea>
+            </div>
+
+            <button type="button" id="add_component"></button>
+        </div>
+
+        <div id="right_panel">
+            <h3>In This Documentation <span class="info_icon"></span></h3>
+
+            <ul id="section_list">
+                <li><a href="#">Learn the HTML structu...</a></li>
+                <li><a href="#">Learn the HTML structu...</a></li>
+                <li><a href="#">Learn the HTML structu...</a></li>
+                <li><a href="#">Learn the HTML structu...</a></li>
+                <li><a href="#">Learn the HTML structu...</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="clone_block">
+        
+    </div>
+</body>
+</html>
