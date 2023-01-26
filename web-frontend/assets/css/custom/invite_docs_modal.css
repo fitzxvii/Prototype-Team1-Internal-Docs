@@ -72,30 +72,6 @@
   background: #ffdada;
   position: relative;
 }
-.modal-dialog .modal-body .tooltip {
-  position: absolute;
-  background: #000000;
-  color: #fff;
-  white-space: nowrap;
-  top: 110%;
-  left: 0;
-  z-index: 2;
-  padding: 0 10px;
-  font-size: 12px;
-  border-radius: 4px;
-  text-align: center;
-  display: none;
-}
-.modal-dialog .modal-body .tooltip:after {
-  content: ' ';
-  position: absolute;
-  left: 40%;
-  bottom: 80%;
-  display: block;
-  border-bottom: 10px solid #000;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-}
 .modal-dialog .modal-body .remove-button {
   padding: 0 7px;
   font-size: 18px;
@@ -107,9 +83,6 @@
       -ms-user-select: none;
           user-select: none;
   vertical-align: bottom;
-}
-.modal-dialog .modal-body .invalid-email .remove-button {
-  padding-right: 0;
 }
 .modal-dialog .modal-body .email-input {
   border: none;
