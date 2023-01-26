@@ -96,7 +96,7 @@
 }
 .modal-dialog .modal-body #collaborators_container label {
   font: 16px/24px "Roboto-Medium";
-  margin: 24px 0px;
+  margin-bottom: 24px;
 }
 .modal-dialog .modal-body #collaborators_container .collaborator_row {
   margin-bottom: 12px;
