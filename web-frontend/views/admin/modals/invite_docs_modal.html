@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite Document Modal</title>
+    <link rel="stylesheet" href="../../../assets/css/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet/less" type="text/css"  href="../../../assets/css/custom/invite_docs_modal.css" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+</head>
+<body>
+    <!-- Button trigger modal -->
+    <div class="d-grid gap-2 mt-2">
+        <button type="button" class="p-2" id="sample_btn"> Launch Invite Document modal </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="invite_docs_modal" tabindex="-1" aria-labelledby="invite_docs_modal_header" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="invite_docs_modal_header">
+                        <img id="share_icon" src="../../../assets/images/share_icon.svg" alt="Share Icon">
+                        <h5>Share "Engineering Team"</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form class="emails-form" method="POST">
+                            <div class="row">
+                                <div class="col-9">
+                                    <div id="emails-input"></div>
+                                </div>
+                                <div class="col-3">
+                                    <select class="form-select access_selector">
+                                        <option selected value="0">Viewer</option>
+                                        <option value="1">Editor</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="collaborators_container">
+                            <label> People with Access </label>
+                            <div class="px-2 row collaborator_row">
+                                <div class="col-1">
+                                    <img src="../../../assets/images/trollman.png" id="profile_pic" class="rounded-circle" alt="profile_pic">
+                                </div>
+                                <div class="col-8">
+                                    <p>
+                                        Fitz Gerald Villegas
+                                        <a class="link-primary email_address">fvillegas@village88.com</a>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <h5 class="text-end">Editor</h5>
+                                </div>
+                            </div>
+                            <div class="px-2 row collaborator_row">
+                                <div class="col-1">
+                                    <img src="../../../assets/images/trollman.png" id="profile_pic" class="rounded-circle" alt="profile_pic">
+                                </div>
+                                <div class="col-8">
+                                    <p>
+                                        Ruelito Ytac
+                                        <a class="link-primary email_address">ruelito-ytac@village88.com</a>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <form class="change_user_access_form" method="POST">
+                                        <input type="hidden" name="user_id" value="6">
+                                        <select class="form-select access_selector collaborator_access">
+                                            <option selected value="0">Viewer</option>
+                                            <option value="1">Editor</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="px-2 row collaborator_row">
+                                <div class="col-1">
+                                    <img src="../../../assets/images/trollman.png" id="profile_pic" class="rounded-circle" alt="profile_pic">
+                                </div>
+                                <div class="col-8">
+                                    <p>
+                                        Stan Bernie Nudo
+                                        <a class="link-primary email_address">snudo@village88.com</a>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <form class="change_user_access_form" method="POST">
+                                        <input type="hidden" name="user_id" value="9">
+                                        <select class="form-select access_selector collaborator_access">
+                                            <option value="0">Viewer</option>
+                                            <option selected value="1">Editor</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <a id="copy_link" class="link-primary"><img id="link_icon" src="../../../assets/images/link_icon.svg" alt="Share Icon">Copy Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/custom/invite_docs_modal.js"></script>
+</body>
+</html>

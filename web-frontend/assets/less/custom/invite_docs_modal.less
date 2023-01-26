@@ -1,0 +1,195 @@
+@import url("./variables.less");
+
+#sample_btn{
+    margin: 0px auto;
+    text-align: center;
+}
+
+.modal-dialog{
+    max-width: 620px;
+
+    .modal-header{
+        border-bottom: none;
+        padding: 24px 24px 12px 24px;
+
+        #invite_docs_modal_header{
+            #share_icon{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+            }
+
+            h5{
+                display: inline-block;
+                font: 22px/28px @font_regular;
+                color: @secondary_20;
+                vertical-align: top;
+                margin-left: 12px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .modal-body{
+        padding: 0 24px 0px 24px;
+
+        .lib-emails-input-container {
+            border: 1px solid rgba(125, 148, 157, 0.5);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .access_selector{
+            color: @secondary_60;
+            background-image: url("../../images/arrow_drop_down.svg");
+            background-size: 18px 15px;
+            padding: 9px;
+            border-radius: 8px;
+            font: 16px/24px @font_regular;
+            background-position: right 2px center;
+            border: 1px solid rgba(125, 148, 157, 0.5);
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        .email-block {
+            font: 12px/16px @font_medium;
+            line-height: 24px;
+            padding: 0 0 0 8px;
+            border-radius: 20px;
+            display: inline-block;
+            border: solid @secondary_60 1px;
+            color: @secondary_20;
+            margin: 0px 4px 4px 0px;
+        }
+
+        .invalid-email {
+            background: #fff;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            border-bottom: 1px dashed red;
+        }
+
+        .valid-email {
+            border: 1px solid rgba(125, 148, 157, 0.5);
+        }
+
+        .duplicate {
+            background: #ffdada;
+            position: relative;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: #000000;
+            color: #fff;
+            white-space: nowrap;
+            top: 110%;
+            left: 0;
+            z-index: 2;
+            padding: 0 10px;
+            font-size: 12px;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+
+        .tooltip:after {
+            content: ' ';
+            position: absolute;
+            left: 40%;
+            bottom: 80%;
+            display: block;
+            border-bottom: 10px solid #000;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        .remove-button {
+            padding: 0 7px;
+            font-size: 18px;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            cursor: pointer;
+            user-select: none;
+            vertical-align: bottom;
+        }
+
+        .invalid-email .remove-button {
+            padding-right: 0;
+        }
+
+        .email-input {
+            border: none;
+            font: 12px/16px @font_regular;
+            line-height: 24px;
+            min-height: 24px;
+            outline: none;
+            width: fit-content;
+        }
+
+        #collaborators_container{
+            label{
+                font: 16px/24px @font_medium;
+                margin: 24px 0px;
+            }
+
+            .collaborator_row{
+                margin-bottom: 12px;
+                border-bottom: solid @primary_90 1px;
+
+                #profile_pic{
+                    height: 40px;
+                    width: 40px;
+                    padding: 4px;
+                }
+
+                p{
+                    font: 14px/20px @font_medium;
+
+                    .email_address{
+                        font: 12px/16px @font_medium;
+                        color: #009EBE;
+                        display: block;
+                        cursor: pointer;
+                    }
+                }
+
+                h5{
+                    font: 16px/24px @font_regular;
+                    color: @secondary_60;
+                }
+
+                .collaborator_access{
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .modal-footer{
+        border-top: none;
+        padding: 24px;
+
+        #copy_link{
+            cursor: pointer;
+            font: 12px/16px @font_medium;
+            color: #009EBE;
+            text-decoration: none;
+
+            #link_icon{
+                padding-right: 8px;
+            }
+        }
+    }
+}
+
+
+
+
+
+

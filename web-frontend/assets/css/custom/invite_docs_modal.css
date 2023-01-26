@@ -1,0 +1,165 @@
+@import url("/web-frontend/assets/css/custom/fonts.css");
+/* FONTS */
+/* COLORS */
+#sample_btn {
+  margin: 0px auto;
+  text-align: center;
+}
+.modal-dialog {
+  max-width: 620px;
+}
+.modal-dialog .modal-header {
+  border-bottom: none;
+  padding: 24px 24px 12px 24px;
+}
+.modal-dialog .modal-header #invite_docs_modal_header #share_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+.modal-dialog .modal-header #invite_docs_modal_header h5 {
+  display: inline-block;
+  font: 22px/28px "Roboto-Regular";
+  color: #1D333B;
+  vertical-align: top;
+  margin-left: 12px;
+  margin-bottom: 0px;
+}
+.modal-dialog .modal-body {
+  padding: 0 24px 0px 24px;
+}
+.modal-dialog .modal-body .lib-emails-input-container {
+  border: 1px solid rgba(125, 148, 157, 0.5);
+  padding: 8px;
+  border-radius: 8px;
+}
+.modal-dialog .modal-body .access_selector {
+  color: #7D949D;
+  background-image: url("../../images/arrow_drop_down.svg");
+  background-size: 18px 15px;
+  padding: 9px;
+  border-radius: 8px;
+  font: 16px/24px "Roboto-Regular";
+  background-position: right 2px center;
+  border: 1px solid rgba(125, 148, 157, 0.5);
+}
+.modal-dialog .modal-body .access_selector:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.modal-dialog .modal-body .email-block {
+  font: 12px/16px "Roboto-Medium";
+  line-height: 24px;
+  padding: 0 0 0 8px;
+  border-radius: 20px;
+  display: inline-block;
+  border: solid #7D949D 1px;
+  color: #1D333B;
+  margin: 0px 4px 4px 0px;
+}
+.modal-dialog .modal-body .invalid-email {
+  background: #fff;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  border-bottom: 1px dashed red;
+}
+.modal-dialog .modal-body .valid-email {
+  border: 1px solid rgba(125, 148, 157, 0.5);
+}
+.modal-dialog .modal-body .duplicate {
+  background: #ffdada;
+  position: relative;
+}
+.modal-dialog .modal-body .tooltip {
+  position: absolute;
+  background: #000000;
+  color: #fff;
+  white-space: nowrap;
+  top: 110%;
+  left: 0;
+  z-index: 2;
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  text-align: center;
+  display: none;
+}
+.modal-dialog .modal-body .tooltip:after {
+  content: ' ';
+  position: absolute;
+  left: 40%;
+  bottom: 80%;
+  display: block;
+  border-bottom: 10px solid #000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.modal-dialog .modal-body .remove-button {
+  padding: 0 7px;
+  font-size: 18px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: bottom;
+}
+.modal-dialog .modal-body .invalid-email .remove-button {
+  padding-right: 0;
+}
+.modal-dialog .modal-body .email-input {
+  border: none;
+  font: 12px/16px "Roboto-Regular";
+  line-height: 24px;
+  min-height: 24px;
+  outline: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.modal-dialog .modal-body #collaborators_container label {
+  font: 16px/24px "Roboto-Medium";
+  margin: 24px 0px;
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row {
+  margin-bottom: 12px;
+  border-bottom: solid #CEE6F0 1px;
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row #profile_pic {
+  height: 40px;
+  width: 40px;
+  padding: 4px;
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row p {
+  font: 14px/20px "Roboto-Medium";
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row p .email_address {
+  font: 12px/16px "Roboto-Medium";
+  color: #009EBE;
+  display: block;
+  cursor: pointer;
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row h5 {
+  font: 16px/24px "Roboto-Regular";
+  color: #7D949D;
+}
+.modal-dialog .modal-body #collaborators_container .collaborator_row .collaborator_access {
+  border: none;
+}
+.modal-dialog .modal-footer {
+  border-top: none;
+  padding: 24px;
+}
+.modal-dialog .modal-footer #copy_link {
+  cursor: pointer;
+  font: 12px/16px "Roboto-Medium";
+  color: #009EBE;
+  text-decoration: none;
+}
+.modal-dialog .modal-footer #copy_link #link_icon {
+  padding-right: 8px;
+}
