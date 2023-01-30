@@ -94,9 +94,37 @@
   width: -moz-fit-content;
   width: fit-content;
 }
+.modal-dialog .modal-body .suggestions {
+  position: absolute;
+  width: 68%;
+  background: #FFFFFF;
+  text-align: left;
+}
+.modal-dialog .modal-body ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+.modal-dialog .modal-body ul li {
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+.modal-dialog .modal-body ul li:hover {
+  background-color: #CEE6F0;
+}
+.modal-dialog .modal-body .has-suggestions {
+  display: block;
+}
 .modal-dialog .modal-body #collaborators_container label {
   font: 16px/24px "Roboto-Medium";
   margin-bottom: 24px;
+  margin-top: 24px;
 }
 .modal-dialog .modal-body #collaborators_container .collaborator_row {
   margin-bottom: 12px;

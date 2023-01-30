@@ -102,10 +102,42 @@
             width: fit-content;
         }
 
+        .suggestions {
+            position: absolute;
+            width: 68%;
+            background: @white;
+            text-align: left;
+        }
+
+        ul {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+            max-height: 200px;
+            overflow-y: auto;
+
+            li {
+                padding: 10px;
+                cursor: pointer;
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            li:hover {
+                background-color: @primary_90;
+            }
+        }
+
+        .has-suggestions {
+            display: block;
+        }
+
         #collaborators_container{
             label{
                 font: 16px/24px @font_medium;
                 margin-bottom: 24px;
+                margin-top: 24px;
             }
 
             .collaborator_row{
