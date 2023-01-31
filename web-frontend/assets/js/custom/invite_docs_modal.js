@@ -9,62 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         validEmailClass: 'valid-email',
     });
 
-    const input = document.querySelector('.email-input');
-    const suggestions = document.querySelector('.suggestions ul');
-    const fruit = ['fvillegas@village88.com', 'jdeleon@village88.com', 'snudo@village88.com', 'ruelito-ytac@village88.com'];
-
-    function search(str) {
-        let results = [];
-        const val = str.toLowerCase();
-
-        for (i = 0; i < fruit.length; i++) {
-            if (fruit[i].toLowerCase().indexOf(val) > -1) {
-                results.push(fruit[i]);
-            }
-        }
-
-        return results;
-    }
-
-    function searchHandler(e) {
-        const inputVal = e.currentTarget.value;
-        let results = [];
-        if (inputVal.length > 0) {
-            results = search(inputVal);
-        }
-        showSuggestions(results, inputVal);
-    }
-
-    function useSuggestion(e) {
-        input.value = e.target.innerText;
-        input.focus();
-        suggestions.innerHTML = '';
-        suggestions.classList.remove('has-suggestions');
-    }
-
-    function showSuggestions(results, inputVal) {
-        suggestions.innerHTML = '';
-
-        if (results.length > 0) {
-            for (i = 0; i < results.length; i++) {
-                let item = results[i];
-                // Highlights only the first match
-                // TODO: highlight all matches
-                const match = item.match(new RegExp(inputVal, 'i'));
-                item = item.replace(match[0], `<strong>${match[0]}</strong>`);
-                suggestions.innerHTML += `<li>${item}</li>`;
-            }
-            suggestions.classList.add('has-suggestions');
-        } else {
-            results = [];
-            suggestions.innerHTML = '';
-            suggestions.classList.remove('has-suggestions');
-        }
-    }
-
-    input.addEventListener('keyup', searchHandler);
-    suggestions.addEventListener('click', useSuggestion);
-
+    document.querySelector('.email-input').addEventListener('keyup', searchHandler);
+    document.querySelector('.suggestions ul').addEventListener('click', useSuggestion);
 });
 
 const showInviteDocumentModal = () => {
@@ -235,5 +181,66 @@ function EmailsInput(selector, options) {
             addEmailToList(emailsContainer, email, options);
         },
     };
+}
+
+const all_users_obj = [
+    {profile_pic: "../../../assets/images/trollman.png", full_name: "Fitz Gerald Villegas", email: "fvillegas@village88.com"},
+    {profile_pic: "../../../assets/images/trollman.png", full_name: "Jessie De Leon", email: "jdeleon@village88.com"},
+    {profile_pic: "../../../assets/images/trollman.png", full_name: "Ruelito Ytac", email: "ruelito-ytac@village88.com"},
+    {profile_pic: "../../../assets/images/trollman.png", full_name: "Stan Bernie Nudo", email: "snudo@village88.com"},
+]
+
+function search(str) {
+    const val = str.toLowerCase();
+    let results = all_users_obj.filter(user => new RegExp(`^${val}`).test(user.email.toLowerCase()));
+    return results;
+}
+
+function searchHandler(e) {
+    const inputVal = e.currentTarget.value;
+    let results = [];
+
+    if (inputVal.length > 0) {
+        results = search(inputVal);
+    }
+
+    showSuggestions(results, inputVal);
+}
+
+function useSuggestion(e) {
+    let input = document.querySelector('.email-input');
+    let suggestions = document.querySelector('.suggestions ul');
+
+    input.value = e.target.innerText;
+    input.focus();
+    suggestions.innerHTML = '';
+    suggestions.classList.remove('has-suggestions');
+}
+
+function showSuggestions(results, inputVal) {
+    let suggestions = document.querySelector('.suggestions ul');
+    suggestions.innerHTML = '';
+
+    if (results.length > 0) {
+        for (i = 0; i < results.length; i++) {
+            let item = results[i];
+            suggestions.innerHTML += `
+                <li>
+                    <img src="${item.profile_pic}" id="profile_pic" class="rounded-circle" alt="profile_pic">
+                    <div>
+                        <p>${item.full_name}</p>
+                        <a class="email_address">${item.email}</a>
+                    </div>
+                </li>
+            `;
+        }
+
+        suggestions.classList.add('has-suggestions');
+    }
+    else {
+        results = [];
+        suggestions.innerHTML = '';
+        suggestions.classList.remove('has-suggestions');
+    }
 }
 
