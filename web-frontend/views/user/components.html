@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components</title>
+    <link rel="stylesheet" href="../../assets/css/custom/user/components.css">
     <link rel="stylesheet" href="../../assets/css/custom/admin/component_preview.css">
     <link rel="icon" type="image/x-icon" href="/web-frontend/assets/images/favicon.svg">
 
@@ -21,7 +22,7 @@
     <script src="../../assets/js/custom/render_assets.js"></script>
 </head>
 <body>
-    <div data-include="./templates/navigation.html"></div>
+    <div data-include="../admin/templates/navigation.html"></div>
 
     <section id="component_wrapper">
         <div id="left_panel">
@@ -79,12 +80,14 @@
                     </div>
         
                     <div class="post_block">
-                        <label class="input_field">
-                            <span>Post</span>
-                            <input type="text" name="post_comment" class="post_comment" placeholder="Enter Post...">
-                            <span class="char_count">0/250</span>
-                        </label>
-        
+                        <form action="#" class="add_post_form" method="post">
+                            <label class="input_field">
+                                <span>Post</span>
+                                <input type="text" name="post_comment" class="post_comment" placeholder="Enter Post...">
+                                <span class="char_count">0/250</span>
+                            </label>
+                        </form>
+
                         <ul class="post_list">
                         </ul>
                     </div>
@@ -104,5 +107,61 @@
             </ul>
         </div>
     </section>
+
+    <div id="clone_block">
+        <ul>
+            <li class="post_item">
+                <div class="header">
+                    <img src="#" alt="User Profile">
+                    <span class="user_name">Ruel</span>
+                    ∙
+                    <span class="timestamp">1 min ago</span>
+
+                    <div class="action_option_btn">
+                        <button class="update_btn"><span class="update_icon"></span></button>
+                        <button class="delete_btn"><span class="delete_icon"></span></button>
+                    </div>
+                </div>
+                <p class="user_post_message"></p>
+                <form action="#" class="update_post_form" method="POST">
+                    <input type="text" class="user_post_input" class="required_input">
+                </form>
+
+                <button class="show_reply_btn"><span class="caret_arrow"></span> 1 Reply</button>
+
+                <div class="reply_details">
+                    <ul class="reply_list"></ul>
+    
+                    <form action="#" class="reply_form" method="post">
+                        <label class="input_field">
+                            <span>Reply</span>
+                            <input type="text" name="post_comment" class="post_comment" placeholder="Enter Post...">
+                            <span class="char_count">0/250</span>
+                        </label>
+                    </form>
+                </div>
+            </li>
+
+            <li class="reply_item">
+                <div class="header">
+                    <img src="#" alt="User Profile">
+                    <span class="user_name">Ruel</span>
+                    ∙
+                    <span class="timestamp">1 min ago</span>
+
+                    <div class="action_option_btn">
+                        <button class="update_btn"><span class="update_icon"></span></button>
+                        <button class="delete_btn"><span class="delete_icon"></span></button>
+                    </div>
+                </div>
+                <p class="user_reply_message"></p>
+                <form action="#" class="update_reply_form" method="POST">
+                    <input type="text" class="user_reply_input" class="required_input">
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../../assets/js/custom/user/components.js"></script>
 </body>
 </html>

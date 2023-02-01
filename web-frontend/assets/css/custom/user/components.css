@@ -1,0 +1,7 @@
+.input_field {
+  opacity: 1 !important;
+  pointer-events: unset !important;
+}
+#clone_block {
+  display: none;
+}

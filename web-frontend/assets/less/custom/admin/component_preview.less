@@ -33,7 +33,7 @@ label.input_field{
 
 #component_wrapper{
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     width: 1045px;
 
     #left_panel{
@@ -55,9 +55,8 @@ label.input_field{
                     border: none;
                     color: @secondary_20;
                     font: 22px/28px @font_regular;
-                    min-width: 130px;
+                    margin: 0;
                     outline: none;
-                    width: 130px;
                 }
 
                 button{
@@ -74,7 +73,7 @@ label.input_field{
                     outline: none;
                     width: 104px;
 
-                    .preview_icon{
+                    .update_icon{
                         background: url("/web-frontend/assets/images/preview_update_svg_icon.svg") no-repeat -32px 0px;
                         display: block;
                         height: 18px;
@@ -163,36 +162,86 @@ label.input_field{
                             }
 
                             button{
-                                background: transparent;
-                                border: transparent;
+                                background-color: transparent;
+                                border: none;
+                                color: @teal_500;
                             }
                         }
                     }
                 }
 
-                .tab-content{
-                    background: @white;
-                }
-
-                form{
+                .tab_details{
                     background: @white;
                     padding: 24px;
 
-                    .rx-container{
-                        border: 1px solid @secondary_90;
-                        border-radius: 8px;
-                        margin-top: 24px;
+                    h1{
+                        color: @secondary_20;
+                        font: 22px/28px @font_medium;
+                    }
 
-                        .rx-toolbar-container{
-                            background: @primary98;
-                            border-bottom: none;
-                            border-radius: 8px 8px 0 0;
+                    
+                    h3, h4, h5{
+                        color: @secondary_60;
+                        font: 22px/28px @font_regular;
+                    }
+                    
+                    h2{
+                        color: @secondary_20;
+                        font: 22px/28px @font_medium;
+                    }
+
+                    p{
+                        color: @secondary_40;
+                        font: 14px/20px @font_regular;
+                    }
+                }
+
+                .action_btn{
+                    align-items: center;
+                    background-color: @white;
+                    border-bottom: .5px solid @secondary_90;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 0 24px 24px;
+
+                    button{
+                        align-items: center;
+                        background: transparent;
+                        border: transparent;
+                        color: @secondary_60;
+                        display: flex;
+                        font: 14px/20px @font_medium;
+                        justify-content: center;
+                        opacity: .5;
+                        outline: none;
+
+                        &:first-child{
+                            margin-right: 24px;
                         }
 
-                        .rx-editor-container{
-                            p{
-                                color: @secondary_40;
-                                font: 14px/20px @font_regular;
+                        &.active{
+                            color: @teal_500;
+                            opacity: 1;
+
+                            span{
+                                background-position: -57px 0px;
+
+                                &.next_tab_icon{
+                                    background-position: -82px 0px;
+                                }
+                            }
+                        }
+
+                        span{
+                            background: url("../../../images/arrow_icon.svg") no-repeat 0px 0px;
+                            display: block;
+                            height: 18px;
+                            margin-right: 8px;
+                            width: 18px;
+
+                            &.next_tab_icon{
+                                background-position: -27px 0px;
+                                margin: 0 0 0 8px;
                             }
                         }
                     }
@@ -201,7 +250,7 @@ label.input_field{
                 .post_block{
                     background: @white;
                     border-radius: 0 0 8px 8px;
-                    padding: 0 24px 24px 24px;
+                    padding: 24px;
 
                     .checkbox_style{
                         background: @secondary_90;
@@ -244,27 +293,6 @@ label.input_field{
                         padding: 0;
                     }
                 }
-            }
-        }
-
-        #add_component{
-            align-items: center;
-            background: @teal_50;
-            border: 3px dashed @teal_500;
-            border-radius: 8px;
-            display: flex;
-            height: 120px;
-            justify-content: center;
-            margin: 24px 0;
-            position: relative;
-            width: 100%;
-
-            &::after{
-                background: url("../../../images/svg_icons_stripe.svg") no-repeat -595px 0px;
-                content: "";
-                height: 36px;
-                position: absolute;
-                width: 36px;
             }
         }
     }
@@ -337,8 +365,4 @@ label.input_field{
             }
         }
     }
-}
-
-#clone_block{
-    display: none;
 }

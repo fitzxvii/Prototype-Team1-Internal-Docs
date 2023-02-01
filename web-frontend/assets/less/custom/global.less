@@ -4,6 +4,18 @@
     font: 14px/18px @font_regular;
 }
 
+.hidden{
+    display: none;
+}
+
+.input_error{
+    border: 1px solid @red;
+    border-bottom: 2px solid @red !important;
+    span{
+        color: @red !important;
+    }
+}
+
 body{
     background: @main_background;
 }
@@ -40,9 +52,9 @@ nav{
                 border-radius: 24/2px;
                 content: "";
                 height: 24px;
+                left: 3px;
                 position: absolute;
                 width: 24px;
-                left: 3px;
             }
 
             button{
@@ -57,13 +69,13 @@ nav{
                     position: relative;
 
                     &::after{
-                        content: "";
                         background: url("../../images/svg_icons_stripe.svg") no-repeat 4.5px -5.3px;
-                        width: 24px;
-                        height: 24px;
-                        position: absolute;
-                        left: 0;
                         bottom: 0;
+                        content: "";
+                        height: 24px;
+                        left: 0;
+                        position: absolute;
+                        width: 24px;
                     }
                 }
 
@@ -72,13 +84,13 @@ nav{
                     position: relative;
                     
                     &::after{
-                        content: "";
                         background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
-                        width: 24px;
+                        bottom: 0;
+                        content: "";
                         height: 24px;
                         position: absolute;
                         right: 0;
-                        bottom: 0;
+                        width: 24px;
                     }
                 }
             }
@@ -107,25 +119,25 @@ nav{
 
                 #dark_mode{
                     &::after{
-                        background: url("../../images/svg_icons_stripe.svg") no-repeat -29px -5.3px;
                         animation: show_icon .35s ease-in-out;
                         animation-fill-mode: forwards;
+                        background: url("../../images/svg_icons_stripe.svg") no-repeat -29px -5.3px;
                     }
                 }
 
                 #light_mode{
                     @keyframes change_icon {
-                        0%{ opacity: 0; background-position: 4.5px -5.3px; }
-                        25%{ opacity: 10%; background-position: 4.5px -5.3px; }
-                        50%{ opacity: 35%; background-position: 4.5px -5.3px; }
-                        75%{ opacity: 65%; background-position: -62px -5.3px; }
-                        100%{ opacity: 100%; background-position: -62px -5.3px; }
+                        0%{ background-position: 4.5px -5.3px; opacity: 0; }
+                        25%{ background-position: 4.5px -5.3px; opacity: 10%; }
+                        50%{ background-position: 4.5px -5.3px; opacity: 35%; }
+                        75%{ background-position: -62px -5.3px; opacity: 65%; }
+                        100%{ background-position: -62px -5.3px; opacity: 100%; }
                     }
 
                     &::after{
-                        background: url("../../images/svg_icons_stripe.svg") no-repeat;
                         animation: change_icon .35s ease-in-out;
                         animation-fill-mode: forwards;
+                        background: url("../../images/svg_icons_stripe.svg") no-repeat;
                     }
                 }
             }
@@ -154,25 +166,25 @@ nav{
 
                 #dark_mode{
                     &::after{
-                        background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
                         animation: show_icon .35s ease-in-out;
                         animation-fill-mode: forwards;
+                        background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
                     }
                 }
 
                 #light_mode{
                     @keyframes change_light_icon {
-                        0%{ opacity: 0; background-position: 62px -5.3px; }
-                        25%{ opacity: 10%; background-position: 62px -5.3px; }
-                        50%{ opacity: 35%; background-position: 62px -5.3px; }
-                        75%{ opacity: 65%; background-position: 4.5px -5.3px; }
-                        100%{ opacity: 100%; background-position: 4.5px -5.3px; }
+                        0%{ background-position: 62px -5.3px; opacity: 0; }
+                        25%{ background-position: 62px -5.3px; opacity: 10%; }
+                        50%{ background-position: 62px -5.3px; opacity: 35%; }
+                        75%{ background-position: 4.5px -5.3px; opacity: 65%; }
+                        100%{ background-position: 4.5px -5.3px; opacity: 100%; }
                     }
 
                     &::after{
-                        background: url("../../images/svg_icons_stripe.svg") no-repeat;
                         animation: change_light_icon .35s ease-in-out;
                         animation-fill-mode: forwards;
+                        background: url("../../images/svg_icons_stripe.svg") no-repeat;
                     }
                 }
             }
@@ -211,22 +223,45 @@ nav{
     align-items: center;
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 24px 0 23px;
     padding: 0;
 
     a{
         color: @primary_60;
+        cursor: pointer;
         font: 14px/20px @font_medium;
         text-decoration: none;
     }
 
     p{
+        color: @secondary_60;
+        font: 14px/20px @font_medium;
         margin: 0;
     }
 
     li{
         margin-left: 45px;
         position: relative;
+
+        a, p{
+            align-items: center;
+            display: flex;
+
+            .breadcrumbs_icon{
+                background: url("../../images/svg_icons_stripe.svg") no-repeat -201px -10px;
+                display: block;
+                height: 18px;
+                margin-right: 8px;
+                width: 18px;
+
+                &.section_icon{
+                    background-position: -238px -10px;
+                }
+                &.component_icon{
+                    background-position: -386px -10px;
+                }
+            }
+        }
 
         &:first-child{
             margin-left: 0;
@@ -236,8 +271,8 @@ nav{
             background: url("../../images/svg_icons_stripe.svg") no-repeat -423px -9px;
             content: "";
             height: 18px;
-            right: -33px;
             position: absolute;
+            right: -33px;
             top: 0;
             width: 18px;
         }

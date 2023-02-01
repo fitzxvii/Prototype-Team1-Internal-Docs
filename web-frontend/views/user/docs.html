@@ -5,34 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/web-frontend/assets/images/favicon.svg">
-    <title>BoomYEAH Docs Tool | Documentations</title>
-
+    <title>Users Documentation</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/web-frontend/assets/css/custom/documentation.css">
+    <link rel="stylesheet" href="../../assets/css/custom/documentation.css">
 
     <script src="/web-frontend/assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/web-frontend/assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 
     <!-- CONSTANTS -->
-    <script src="/web-frontend/assets/js/constans.js"></script>
+    <script src="../../assets/js/constans.js"></script>
 
     <!-- CUSTOM JS -->
     <script>
-        let current_js  = "/web-frontend/assets/js/custom/admin/documentation.js";
+        let current_js  = "../../assets/js/custom/user/documentation.js";
     </script>
 
     <!-- ASSETS LOADER -->
-    <script src="/web-frontend/assets/js/vendor/assets_loader.min.js"></script>
-    <script src="/web-frontend/assets/js/custom/render_assets.js"></script>
+    <script src="../../assets/js/vendor/assets_loader.min.js"></script>
+    <script src="../../assets/js/custom/render_assets.js"></script>
 </head>
 <body>
-    <div data-include="./templates/navigation.html"></div>
+    <div data-include="../admin/templates/navigation.html"></div>
     <div id="dashboard_wrapper">
         <div id="form_container">
-            <form id="create_document_form" action="#" data-processing="0">
-                <label>
-                    <span>Add Documentation</span>
-                    <input id="add_documentation_input" type="text">
+            <form id="search_document_form" action="#" data-processing="0">
+                <label id="search_document">
+                    <span>Search Documentation</span>
+                    <input id="search_documentation_input" type="text">
                 </label>
             </form>
 
@@ -53,46 +52,16 @@
         <img id="no_data_logo" src="../../assets/images/no_data_logo.svg" alt="No Data Logo" hidden>
     </div>
 
-    <div id="popover_container" hidden>
-        <div id="document_options">
-            <ul>
-                <li><button type="button" class="edit_document">Edit</button></li>
-                <li><button type="button" class="duplicate_document">Duplicate</button></li>
-                <li><button type="button" class="remove_document">Remove</button></li>
-                <li><button type="button" class="archive_document">Archive</button></li>
-                <li>
-                    <div class="public_document">
-                        <input class="public_checkbox_setting" type="checkbox" name="public_setting">
-                        <span class="public_document"></span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
     <li id="clone">
         <a href="#">
             <div></div>
             <div class="document_information">
-                <button type="button" class="documents_menu" role="button" data-bs-toggle="popover"></button>
                 <h2><span class="document_title"></span><label><input type="checkbox" name="checkbox"><span class="star_toggle_button"></span></label></h2>
                 <span><span class="viewers_count"></span> viewers and <span class="editors_count"></span> editor</span>
                 <p></p>
             </div>
         </a>
     </li>
-
-    <div class="modal fade" id="confirm_private_modal" tabindex="-1" aria-labelledby="confirm_private_modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <p>Are you sure you want to <span class="public_private_content"></span>?</p>
-                <div>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button id="confirm_button_yes" type="button" class="btn btn-primary">Yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>

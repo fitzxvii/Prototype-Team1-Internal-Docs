@@ -4,6 +4,16 @@
 * {
   font: 14px/18px "Roboto-Regular";
 }
+.hidden {
+  display: none;
+}
+.input_error {
+  border: 1px solid #e97575;
+  border-bottom: 2px solid #e97575 !important;
+}
+.input_error span {
+  color: #e97575 !important;
+}
 body {
   background: #E7EFF6;
 }
@@ -50,9 +60,9 @@ nav > div #theme_block::after {
   border-radius: 12px;
   content: "";
   height: 24px;
+  left: 3px;
   position: absolute;
   width: 24px;
-  left: 3px;
 }
 nav > div #theme_block button {
   background: none;
@@ -66,26 +76,26 @@ nav > div #theme_block button:first-child {
   position: relative;
 }
 nav > div #theme_block button:first-child::after {
-  content: "";
   background: url("../../images/svg_icons_stripe.svg") no-repeat 4.5px -5.3px;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 0;
   bottom: 0;
+  content: "";
+  height: 24px;
+  left: 0;
+  position: absolute;
+  width: 24px;
 }
 nav > div #theme_block button:last-child {
   margin-left: auto;
   position: relative;
 }
 nav > div #theme_block button:last-child::after {
-  content: "";
   background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
-  width: 24px;
+  bottom: 0;
+  content: "";
   height: 24px;
   position: absolute;
   right: 0;
-  bottom: 0;
+  width: 24px;
 }
 @-webkit-keyframes animate_dark_theme {
   0% {
@@ -162,62 +172,62 @@ nav > div #theme_block.set_dark_mode::after {
           animation-fill-mode: forwards;
 }
 nav > div #theme_block.set_dark_mode #dark_mode::after {
-  background: url("../../images/svg_icons_stripe.svg") no-repeat -29px -5.3px;
   -webkit-animation: show_icon 0.35s ease-in-out;
           animation: show_icon 0.35s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background: url("../../images/svg_icons_stripe.svg") no-repeat -29px -5.3px;
 }
 @-webkit-keyframes change_icon {
   0% {
-    opacity: 0;
     background-position: 4.5px -5.3px;
+    opacity: 0;
   }
   25% {
-    opacity: 10%;
     background-position: 4.5px -5.3px;
+    opacity: 10%;
   }
   50% {
-    opacity: 35%;
     background-position: 4.5px -5.3px;
+    opacity: 35%;
   }
   75% {
-    opacity: 65%;
     background-position: -62px -5.3px;
+    opacity: 65%;
   }
   100% {
-    opacity: 100%;
     background-position: -62px -5.3px;
+    opacity: 100%;
   }
 }
 @keyframes change_icon {
   0% {
-    opacity: 0;
     background-position: 4.5px -5.3px;
+    opacity: 0;
   }
   25% {
-    opacity: 10%;
     background-position: 4.5px -5.3px;
+    opacity: 10%;
   }
   50% {
-    opacity: 35%;
     background-position: 4.5px -5.3px;
+    opacity: 35%;
   }
   75% {
-    opacity: 65%;
     background-position: -62px -5.3px;
+    opacity: 65%;
   }
   100% {
-    opacity: 100%;
     background-position: -62px -5.3px;
+    opacity: 100%;
   }
 }
 nav > div #theme_block.set_dark_mode #light_mode::after {
-  background: url("../../images/svg_icons_stripe.svg") no-repeat;
   -webkit-animation: change_icon 0.35s ease-in-out;
           animation: change_icon 0.35s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background: url("../../images/svg_icons_stripe.svg") no-repeat;
 }
 @-webkit-keyframes animate_light_theme {
   0% {
@@ -277,62 +287,62 @@ nav > div #theme_block.set_light_mode::after {
           animation-fill-mode: forwards;
 }
 nav > div #theme_block.set_light_mode #dark_mode::after {
-  background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
   -webkit-animation: show_icon 0.35s ease-in-out;
           animation: show_icon 0.35s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background: url("../../images/svg_icons_stripe.svg") no-repeat -94px -5.3px;
 }
 @-webkit-keyframes change_light_icon {
   0% {
-    opacity: 0;
     background-position: 62px -5.3px;
+    opacity: 0;
   }
   25% {
-    opacity: 10%;
     background-position: 62px -5.3px;
+    opacity: 10%;
   }
   50% {
-    opacity: 35%;
     background-position: 62px -5.3px;
+    opacity: 35%;
   }
   75% {
-    opacity: 65%;
     background-position: 4.5px -5.3px;
+    opacity: 65%;
   }
   100% {
-    opacity: 100%;
     background-position: 4.5px -5.3px;
+    opacity: 100%;
   }
 }
 @keyframes change_light_icon {
   0% {
-    opacity: 0;
     background-position: 62px -5.3px;
+    opacity: 0;
   }
   25% {
-    opacity: 10%;
     background-position: 62px -5.3px;
+    opacity: 10%;
   }
   50% {
-    opacity: 35%;
     background-position: 62px -5.3px;
+    opacity: 35%;
   }
   75% {
-    opacity: 65%;
     background-position: 4.5px -5.3px;
+    opacity: 65%;
   }
   100% {
-    opacity: 100%;
     background-position: 4.5px -5.3px;
+    opacity: 100%;
   }
 }
 nav > div #theme_block.set_light_mode #light_mode::after {
-  background: url("../../images/svg_icons_stripe.svg") no-repeat;
   -webkit-animation: change_light_icon 0.35s ease-in-out;
           animation: change_light_icon 0.35s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  background: url("../../images/svg_icons_stripe.svg") no-repeat;
 }
 nav > div #user_profile_wrapper {
   -webkit-box-align: center;
@@ -375,20 +385,48 @@ nav > div #user_profile_wrapper button .caret_arrow {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  margin: 0;
+  margin: 24px 0 23px;
   padding: 0;
 }
 .breadcrumbs_block a {
   color: #009EBE;
+  cursor: pointer;
   font: 14px/20px "Roboto-Medium";
   text-decoration: none;
 }
 .breadcrumbs_block p {
+  color: #7D949D;
+  font: 14px/20px "Roboto-Medium";
   margin: 0;
 }
 .breadcrumbs_block li {
   margin-left: 45px;
   position: relative;
+}
+.breadcrumbs_block li a,
+.breadcrumbs_block li p {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.breadcrumbs_block li a .breadcrumbs_icon,
+.breadcrumbs_block li p .breadcrumbs_icon {
+  background: url("../../images/svg_icons_stripe.svg") no-repeat -201px -10px;
+  display: block;
+  height: 18px;
+  margin-right: 8px;
+  width: 18px;
+}
+.breadcrumbs_block li a .breadcrumbs_icon.section_icon,
+.breadcrumbs_block li p .breadcrumbs_icon.section_icon {
+  background-position: -238px -10px;
+}
+.breadcrumbs_block li a .breadcrumbs_icon.component_icon,
+.breadcrumbs_block li p .breadcrumbs_icon.component_icon {
+  background-position: -386px -10px;
 }
 .breadcrumbs_block li:first-child {
   margin-left: 0;
@@ -397,8 +435,8 @@ nav > div #user_profile_wrapper button .caret_arrow {
   background: url("../../images/svg_icons_stripe.svg") no-repeat -423px -9px;
   content: "";
   height: 18px;
-  right: -33px;
   position: absolute;
+  right: -33px;
   top: 0;
   width: 18px;
 }

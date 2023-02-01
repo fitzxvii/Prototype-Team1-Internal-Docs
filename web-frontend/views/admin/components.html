@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Components</title>
+    <title>BoomYEAH Docs Tool | Engineering Guide - Components</title>
     <link rel="stylesheet" href="../../assets/css/custom/admin/components.css">
+    <link rel="icon" type="image/x-icon" href="/web-frontend/assets/images/favicon.svg">
 
     <!-- CONSTANTS -->
     <script src="../../assets/js/constans.js"></script>
@@ -25,19 +26,21 @@
     <section id="component_wrapper">
         <div id="left_panel">
             <ul class="breadcrumbs_block">
-                <li><a href="#"><span class="breadcrumbs_icon"></span> Documentations</a></li>
-                <li><a href="#"><span class="breadcrumbs_icon"></span> Engineering Guide</a></li>
-                <li><p><span class="breadcrumbs_icon"></span> Data Usage, Collection, and Processing</p></li>
+                <li><a href="/web-frontend/views/admin/docs.html"><span class="breadcrumbs_icon"></span> Documentations</a></li>
+                <li><a href="#"><span class="breadcrumbs_icon section_icon"></span> Engineering Guide</a></li>
+                <li><p><span class="breadcrumbs_icon component_icon"></span> Data Usage, Collection, and Processing</p></li>
             </ul>
 
             <div class="section_details">
                 <div class="title_block">
-                    <input type="text" name="section_title" id="section_title" placeholder="Enter Title...">
+                    <input type="text" name="section_title" id="section_title" placeholder="Enter Title..." value="Data Usage, Collection, and Processing">
                     <button type="button"><span class="preview_icon"></span> Preview</button>
                 </div>
 
                 <textarea name="section_details" id="section_details" placeholder="Enter section details..."></textarea>
             </div>
+
+            <div id="component_list"></div>
 
             <button type="button" id="add_component"></button>
         </div>
@@ -46,17 +49,71 @@
             <h3>In This Documentation <span class="info_icon"></span></h3>
 
             <ul id="section_list">
-                <li><a href="#">Learn the HTML structu...</a></li>
-                <li><a href="#">Learn the HTML structu...</a></li>
-                <li><a href="#">Learn the HTML structu...</a></li>
-                <li><a href="#">Learn the HTML structu...</a></li>
-                <li><a href="#">Learn the HTML structu...</a></li>
+                <li><a href="#">The power ranger of source.</a></li>
+                <li class="active"><a href="#">Data Usage, Collection, and Processing</a></li>
+                <li><a href="#">Collection of Nikola Tesla</a></li>
+                <li><a href="#">Destructing of JavaScript</a></li>
+                <li><a href="#">Learn the HTML structure</a></li>
             </ul>
         </div>
     </section>
 
-    <div id="clone_block">
+    <div id="clone_block" class="hidden">
+        <ul>
+            <li class="tab_item nav-item" role="presentation">
+                <button class="tab_name nav-link" data-bs-toggle="tab" data-bs-target="#hny" type="button" role="tab" aria-selected="true">Untitled</button>
+                <button class="remove_tab"></button>
+            </li>
+        </ul>
+
+        <div class="tab-pane fade" id="hny" role="tabpanel">
+            <form action="#" class="update_tab_form" method="post">
+                <label class="input_field">
+                    <span>Titless</span>
+                    <input type="text" name="title" class="title_tab_input required_input" value="Untitled">
+                </label>
+                <textarea name="tab_description" class="tab_description_input hidden" value=""></textarea>
+            </form>
+        </div>
         
+        <div class="component_block">
+            <ul class="tab_list nav nav-tabs" role="tablist">
+                <li class="tab_item active nav-item" role="presentation">
+                    <button class="tab_name nav-link" data-bs-toggle="tab" data-bs-target="#hny" type="button" role="tab" aria-selected="true">Untitled</button>
+                    <button class="remove_tab"></button>
+                </li>
+                <li class="add_tab"><button class="add_tab_btn"></button></li>
+            </ul>
+
+            <div class="tab-content tab_details">
+                <div class="tab-pane fade" id="hny" role="tabpanel">
+                    <form action="#" class="update_tab_form" method="post">
+                        <label class="input_field">
+                            <span>Title</span>
+                            <input type="text" name="title" class="title_tab_input required_input" value="Untitled">
+                        </label>
+                        <textarea name="tab_description" class="tab_description_input hidden" value=""></textarea>
+                    </form>
+                </div>
+            </div>
+
+            <div class="post_block">
+                <label class="checkbox_label">
+                    <input type="checkbox" name="allow_comments" class="allow_comments">
+                    <span class="checkbox_style"></span>
+                    <span class="text_allow_comments">Allow comments</span>
+                </label>
+
+                <label class="input_field">
+                    <span>Post</span>
+                    <input type="text" name="post_comment" class="post_comment" placeholder="Enter Post...">
+                    <span class="char_count">0/250</span>
+                </label>
+
+                <ul class="post_list">
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>

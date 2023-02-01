@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/web-frontend/assets/images/favicon.svg">
+    <title>BoomYEAH Docs Tool | Engineering Guide</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/web-frontend/assets/css/custom/admin/section.css">
+    <script src="/web-frontend/assets/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- CONSTANTS -->
+    <script src="/web-frontend/assets/js/constans.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script>
+        let current_js  = "/web-frontend/assets/js/custom/admin/section.js";
+    </script>
+
+    <!-- ASSETS LOADER -->
+    <script src="/web-frontend/assets/js/vendor/assets_loader.min.js"></script>
+    <script src="/web-frontend/assets/js/custom/render_assets.js"></script>
+</head>
+<body>
+    <div data-include="./templates/navigation.html"></div>
+    <div id="section_wrapper">
+        <ul>
+            <li class="documentation_link"><a href="/">Documentations</a></li>
+            <li class="active section_link"><a href="/">Engineering Guide</a></li>
+        </ul>
+        <div id="section_main_contents">
+            <form id="documents_editable_form" action="#" data-is-processing="0">
+                <input id="documents_title" type="text" value="Engineering Guide">
+                <div id="viewers_editors_count"><span>46 viewers and 3 editors</span></div>
+                <textarea id="document_description_input" role="textbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+                <div id="private_setting_block">
+                    <button>Set as Public</button>
+                </div>
+            </form>
+            <div id="create_section_block">
+                <form id="add_section_form" action="#" data-is-processing="0">
+                    <label>
+                        <span>Add Section</span>
+                        <input id="add_section_input" type="text">
+                    </label>
+                    <button type="submit"></button>
+                </form>
+
+                <ul id="section_list_container">
+                    <li role="button" data-bs-toggle="popover">
+                        <a href="#">
+                            <div></div>
+                            <div>
+                                <h3><span class="section_title">The power ranger of source.</span><button class="duplicate_section"></button> <button class="delete_section"></button></h3>
+                                <p>Rey Plumb had always loved Cups San Fernando City with it Reyna the cups.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="button" data-bs-toggle="popover">
+                        <a href="#">
+                            <div></div>
+                            <div>
+                                <h3><span class="section_title">The power ranger of source.</span><button class="duplicate_section"></button> <button class="delete_section"></button></h3>
+                                <p>Rey Plumb had always loved Cups San Fernando City with it Reyna the cups.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="button" data-bs-toggle="popover">
+                        <a href="#">
+                            <div></div>
+                            <div>
+                                <h3><span class="section_title">The power ranger of source.</span><button class="duplicate_section"></button> <button class="delete_section"></button></h3>
+                                <p>Rey Plumb had always loved Cups San Fernando City with it Reyna the cups.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li role="button" data-bs-toggle="popover">
+                        <a href="#">
+                            <div></div>
+                            <div>
+                                <h3><span class="section_title">The power ranger of source.</span><button class="duplicate_section"></button> <button class="delete_section"></button></h3>
+                                <p>Rey Plumb had always loved Cups San Fernando City with it Reyna the cups.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <li id="clone_section" role="button" data-bs-toggle="popover">
+        <a href="#">
+            <div></div>
+            <div>
+                <h3><span class="section_title">The power ranger of source.</span><button class="duplicate_section"></button> <button class="delete_section"></button></h3>
+                <p>Rey Plumb had always loved Cups San Fernando City with it Reyna the cups.</p>
+            </div>
+        </a>
+    </li>
+
+    <div class="modal fade" id="confirm_private_modal" tabindex="-1" aria-labelledby="confirm_private_modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <p>Are you sure you want to update it to public?</p>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button id="confirm_button_yes" type="button" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</body>
+</html>
